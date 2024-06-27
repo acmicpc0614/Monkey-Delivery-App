@@ -32,7 +32,7 @@ const Menu = () => {
   ];
   return (
     <>
-      <div className="w-full px-5">
+      <div className="w-full px-5 mb-32">
         <div className="flex flex-row justify-between items-center mt-8">
           <p className="text-2xl text-[#4A4B4D]">Menu</p>
           <img src={shopCart} />
