@@ -26,7 +26,7 @@ const Login = ({ setIslogin }) => {
   };
   return (
     <>
-      <div className="bg-white  pt-20 pb-10 text-center h-[812px] content-between justify-center flex flex-col">
+      <div className="bg-white  pt-20 pb-10 text-center px-8 justify-center flex flex-col w-full ">
         <div className="text-center text-3xl">Login</div>
         <div className="pt-2 text-zinc-600 text-sm">
           Add your details to login
@@ -65,22 +65,22 @@ const Login = ({ setIslogin }) => {
         </button>
         <div className="text-[#7C7D7E] py-6 text-sm">or Login With</div>
         <div>
-          <div className="w-80 h-14 rounded-full justify-center text-center flex text-white items-center text-base bg-[#367FC0] text-[12px]">
+          <div className="h-14 rounded-full justify-center text-center flex text-white items-center text-base bg-[#367FC0]  w-full">
             <div className="fa fa-facebook mr-7" />
-            Login with Facebook
+            <div className="text-[12px]">Login with Facebook</div>
           </div>
         </div>
         <div className="py-6">
-          <div className="w-80 h-14 rounded-full justify-center text-center flex text-white items-center text-base bg-[#DD4B39] text-[12px]">
+          <div className="h-14 rounded-full justify-center text-center flex text-white items-center bg-[#DD4B39]  w-full">
             <div className="fa fa-google-plus mr-7" />
-            Login with Google
+            <div className="text-[12px]">Login with Google</div>
           </div>
         </div>
-        <div className="flex justify-center pt-12 gap-1">
+        <div className="flex justify-center pt-[60px] gap-1">
           <div className="text-[#7C7D7E] text-sm self-center">
             Don't have an Account?
           </div>
-          <div>
+          <div className="font-bold">
             <button
               className="bg-transparent text-[#FC6011] self-center"
               onClick={() => handleSignup()}
