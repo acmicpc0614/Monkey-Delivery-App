@@ -20,7 +20,7 @@ const Reset = () => {
         </div>
         <div className="pt-16">
           <input
-            className="w-full rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
+            className="w-full rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14 focus:outline-none"
             placeholder="Email"
             value={value}
             onChange={(e) => setValue(e.target.value)}

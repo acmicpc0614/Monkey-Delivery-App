@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const OPTinputItem = ({ val, setVal, num }) => {
   return (
     <input
-      className="rounded-xl bg-[#F2F2F2]  text-center text-2xl h-14 w-14 "
+      className="rounded-xl bg-[#F2F2F2]  text-center text-2xl h-14 w-14 focus:outline-none"
       placeholder="*"
       value={val}
       type="number"
