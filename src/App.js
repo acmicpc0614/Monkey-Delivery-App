@@ -29,7 +29,7 @@ export default function App() {
   const [islogin, setIslogin] = useState(false);
 
   return (
-    <div className="main-container flex flex-col items-center">
+    <div className="main-container flex flex-col">
       {/* <TopNavbar /> */}
       <BrowserRouter>
         <Routes>

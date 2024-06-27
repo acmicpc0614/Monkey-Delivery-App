@@ -8,7 +8,7 @@ import Selector from "../../components/Menu/ItemSelector";
 import Operatebtn from "../../components/Menu/OperateBtn";
 import carting from "./images/onButtonCarting.svg";
 import { useState } from "react";
-import orangeCart from "./images/orangeCart.svg"
+import orangeCart from "./images/orangeCart.svg";
 import { useNavigate } from "react-router-dom";
 const FoodItem = () => {
   const [portion, setPortion] = useState(2);
@@ -20,16 +20,22 @@ const FoodItem = () => {
     setPortion(portion + 1);
   };
   const navigator = useNavigate();
-  const handleNavigate =()=>{
-    navigator("/food")
-  }
+  const handleNavigate = () => {
+    navigator("/food");
+  };
   return (
     <>
       <div className="w-full flex flex-row justify-center relative">
         <img src={pizza} className="w-full" />
         <img src={contrastPlain} className="w-full absolute z-[10]" />
         <div className="w-screen px-5 flex flex-row justify-between items-center mt-10 absolute z-[20]">
-          <img src={backBtn} className="cursor-pointer" onClick={()=>{handleNavigate()}}/>
+          <img
+            src={backBtn}
+            className="cursor-pointer"
+            onClick={() => {
+              handleNavigate();
+            }}
+          />
           <img src={whiteCart} />
         </div>
       </div>
@@ -106,7 +112,7 @@ const FoodItem = () => {
             </div>
             <div className="flex flex-[2.6] justify-center items-center">
               <div className="w-12 h-12 rounded-full shadow-lg  justify-center items-center flex flex-row translate-x-1/2 bg-white">
-                <img src={orangeCart}/>
+                <img src={orangeCart} />
               </div>
             </div>
           </div>
