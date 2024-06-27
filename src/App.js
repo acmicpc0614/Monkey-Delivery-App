@@ -23,7 +23,7 @@ import InboxComponent from "./pages/More/InboxComponent.js";
 import TopNavbar from "./components/TopNavbar.js";
 import { useState } from "react";
 import MyOrder from "./pages/More/MyOrder.js";
-import AboutComp from "./pages/More/More";
+import AboutComp from "./pages/More/AboutComp";
 
 export default function App() {
   const [islogin, setIslogin] = useState(false);
