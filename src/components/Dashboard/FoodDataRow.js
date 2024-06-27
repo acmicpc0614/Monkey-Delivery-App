@@ -12,6 +12,7 @@ const FoodDataRow = ({ title, picture }) => {
           <img src={rating} />
           <p className="text-[#FC6011]">4.9</p>
           <p>(124 ratings)Café</p>
+          <div className="text-[#FC6011] ml-1 mr-1">·</div>
           <p>Western Food</p>
         </div>
       </div>

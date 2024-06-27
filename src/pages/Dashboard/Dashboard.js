@@ -11,6 +11,7 @@ import josh from "./images/josh.png";
 import barita from "./images/barita.png";
 import hour from "./images/hour.png";
 import bella from "./images/bella.png";
+import "./style/style.css";
 import FoodDataRow from "../../components/Dashboard/FoodDataRow";
 import FoodDataColumn from "../../components/Dashboard/FoodDataColumn";
 import MostPopular from "../../components/Dashboard/MostPopular";
@@ -50,15 +51,19 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="text-xs text-[#4A4B4D]">Delivering to</div>
-          <div className="py-1 font-bold text-[#4A4B4D] ">
+          <div className="py-1 font-bold text-[#4A4B4D]">
             <select className="focus:outline-none ">
-              <option className="">Current Location</option>
-              <option>My office</option>
+              <option className=" hover:bg-slate-800" value="0">
+                Current Location
+              </option>
+              <option className=" hover:bg-slate-800" value="1">
+                My office
+              </option>
             </select>
           </div>
           <div className="bg-[#F2F2F2] grid grid-cols-8 items-center rounded-full w-full h-[45px] mb-[30px] my-5">
-            <div className="text-center">
-              <i className="fa fa-search "></i>
+            <div className="text-center text-xl text-[#4a4b4d]">
+              <i className="fa fa-search font-sans"></i>
             </div>
             <div className="col-span-7 ">
               <input
@@ -67,10 +72,14 @@ const Dashboard = () => {
               />
             </div>
           </div>
-          <div className="grid grid-flow-col auto-cols-max gap-5 text-center font-bold text-[#4A4B4D] text-sm overflow-x-scroll mb-6">
-            {foodDataColumn.map((item) => {
+          <div className="grid grid-flow-col auto-cols-max gap-8 text-center font-bold text-[#4A4B4D] text-sm overflow-x-scroll mb-6">
+            {foodDataColumn.map((item, i) => {
               return (
-                <FoodDataColumn title={item.title} picture={item.picture} />
+                <FoodDataColumn
+                  key={i}
+                  title={item.title}
+                  picture={item.picture}
+                />
               );
             })}
           </div>
@@ -81,8 +90,10 @@ const Dashboard = () => {
         </div>
 
         <div className="">
-          {foodDataRow.map((item) => {
-            return <FoodDataRow title={item.title} picture={item.picture} />;
+          {foodDataRow.map((item, i) => {
+            return (
+              <FoodDataRow key={i} title={item.title} picture={item.picture} />
+            );
           })}
         </div>
       </div>
@@ -92,8 +103,10 @@ const Dashboard = () => {
           <button className="text-[#FC6011] text-sm">View all</button>
         </div>
         <div className="grid grid-flow-col auto-cols-max gap-5 text-center font-bold text-[#4A4B4D] text-sm overflow-x-scroll mb-6">
-          {mostPopular.map((item) => {
-            return <MostPopular title={item.title} picture={item.picture} />;
+          {mostPopular.map((item, i) => {
+            return (
+              <MostPopular key={i} title={item.title} picture={item.picture} />
+            );
           })}
         </div>
         <div className=" grid grid-flow-col justify-between items-end py-5">
@@ -101,9 +114,10 @@ const Dashboard = () => {
           <button className="text-[#FC6011] text-sm">View all</button>
         </div>
         <div className="">
-          {recentItems.map((item) => {
+          {recentItems.map((item, i) => {
             return (
               <RecentItems
+                key={i}
                 title={item.title}
                 picture={item.picture}
                 country={item.country}
