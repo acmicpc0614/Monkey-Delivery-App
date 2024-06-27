@@ -26,7 +26,7 @@ const Login = ({ setIslogin }) => {
   };
   return (
     <>
-      <div className="bg-white  pt-20 pb-10 text-center h-[812px] content-between justify-center flex flex-col">
+      <div className=" bg-white pt-20 pb-10 text-center h-[812px] content-between justify-center flex flex-col">
         <div className="text-center text-3xl">Login</div>
         <div className="pt-2 text-zinc-600 text-sm">
           Add your details to login
