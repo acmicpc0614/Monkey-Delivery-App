@@ -6,6 +6,7 @@ import Beverage from "./images/beverage.svg";
 import Promotions from "./images/promotions.png";
 import Desserts from "./images/desserts.png";
 
+
 const Menu = () => {
   const btnContent = [
     {
@@ -55,6 +56,7 @@ const Menu = () => {
             />
           ))}
         </div>
+        
       </div>
       
     </>
