@@ -40,7 +40,7 @@ const Menu = () => {
         <div className="w-full mt-6">
           <img src={searchIcon} className="mt-3 ml-5 absolute z-10" />
           <input
-            className="w-full h-11 bg-[#F2F2F2] rounded-full indent-14 outline-none"
+            className="w-full h-11 placeholder:italic bg-[#F2F2F2] rounded-full indent-14 outline-none"
             placeholder="Search food"
           ></input>
         </div>

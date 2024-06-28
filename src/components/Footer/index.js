@@ -1,31 +1,30 @@
 import mainbg from "./images/body.png";
-import homeIMG from "./images/home.svg";
-import homeActiveIMG from "./images/homeActive.svg";
+import home from "./images/home.svg";
+import home_red from "./images/homeActive.svg";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import menu from "./images/menu.svg";
-import menuActive from "./images/menuActive.svg";
-import bag from "./images/bag.svg";
-import bagActive from "./images/bagActive.svg";
+import menu_red from "./images/menuActive.svg";
+import offer from "./images/bag.svg";
+import offer_red from "./images/bagActive.svg";
 import profile from "./images/profile.svg";
-import profileActive from "./images/profileActive.svg";
+import profile_red from "./images/profileActive.svg";
 import more from "./images/more.svg";
-import moreActive from "./images/moreActive.svg";
-
-const HOME = 1;
-const MENU = 2;
-const OFFERS = 3;
-const PROFILE = 4;
-const MORE = 5;
+import more_red from "./images/moreActive.svg";
+import FooterButton from "./FooterButton";
 
 const Footer = () => {
-  const [seletct, setseletct] = useState(HOME);
+  const [page, setPage] = useState("home");
   const navigate = useNavigate();
+  const move = () => {
+    setPage("home");
+    navigate("home");
+  };
   return (
     <>
-      <div
+      {/* <div
         className="h-[120px] mt-2 fixed bottom-0 w-screen" // fixed bottom-0
         style={{
           zIndex: 1000,
@@ -125,6 +124,42 @@ const Footer = () => {
               More
             </div>
           </div>
+        </div>
+      </div> */}
+      <div className="flex flex-row items-end mt-6 fixed bottom-0 w-screen justify-between">
+        <div className="flex flex-row justify-between w-[35%]">
+          <FooterButton
+            setPage={setPage}
+            page={page}
+            src={page == "menu" ? menu_red : menu}
+            type={"Menu"}
+          />
+          <FooterButton
+            setPage={setPage}
+            page={page}
+            src={page == "offers" ? offer_red : offer}
+            type={"Offers"}
+          />
+        </div>
+        <img
+          className="mb-12 mx-1.5 z-30"
+          src={page == "home" ? home_red : home}
+          onClick={move}
+        />
+        <img className="absolute z-20 w-[100%] h-[92px]" src={mainbg} />
+        <div className="flex flex-row justify-between w-[35%]">
+          <FooterButton
+            setPage={setPage}
+            page={page}
+            src={page == "profile" ? profile_red : profile}
+            type={"Profile"}
+          />
+          <FooterButton
+            setPage={setPage}
+            page={page}
+            src={page == "more" ? more_red : more}
+            type={"More"}
+          />
         </div>
       </div>
     </>

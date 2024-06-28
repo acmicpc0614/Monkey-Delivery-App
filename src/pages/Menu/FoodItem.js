@@ -39,7 +39,10 @@ const FoodItem = () => {
         </div>
       </div>
       <div className="bg-white rounded-t-[42px] w-full h-[800px] -translate-y-14 px-5">
-        <img src={heart} className="float-right -translate-y-1/2" />
+        <img
+          src={heart}
+          className="float-right -translate-y-1/2 hover:animate-ping"
+        />
         <div className="text-[22px] text-[#4A4B4D] mt-7 ml-[1px]">
           Tandoori Chicken Pizza
         </div>
@@ -80,7 +83,14 @@ const FoodItem = () => {
             >
               -
             </div>
-            <input className="border-[1px] border-[#FC6011] rounded-full w-[47px] h-[30px] flex flex-row justify-center items-center text-[#FC6011] text-base mx-[5px] focus:outline-none text-center" type="number" value={portion} onChange={(e)=>{setPortion(e.target.value)}}/>
+            <input
+              className="border-[1px] border-[#FC6011] rounded-full w-[47px] h-[30px] flex flex-row justify-center items-center text-[#FC6011] text-base mx-[5px] focus:outline-none text-center"
+              type="number"
+              value={portion}
+              onChange={(e) => {
+                setPortion(e.target.value);
+              }}
+            />
             <div
               className="w-[52px] h-[30px] rounded-full bg-[#FC6011] text-white text-base flex flex-row justify-center items-center cursor-pointer"
               onClick={() => {
@@ -109,7 +119,7 @@ const FoodItem = () => {
               </div>
             </div>
             <div className="flex flex-[2.6] justify-center items-center">
-              <div className="w-12 h-12 rounded-full shadow-lg  justify-center items-center flex flex-row translate-x-1/2 bg-white">
+              <div className="w-12 h-12 rounded-full shadow-lg  justify-center items-center flex flex-row translate-x-1/2 bg-white hover:animate-ping">
                 <img src={orangeCart} />
               </div>
             </div>

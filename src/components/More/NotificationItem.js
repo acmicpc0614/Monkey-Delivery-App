@@ -1,7 +1,7 @@
 const NotificationItem = ({ title, time }) => {
   return (
     <>
-      <div className="flex flex-row  border-b h-16 px-[22px] hover:bg-[#eeeeee]">
+      <div className="flex flex-row  border-b h-16 px-[22px] hover:bg-[#eeeeee] ">
         <div className="flex">
           <div className="w-[10px] h-[10px] rounded-full bg-[#EE5A30] mt-[15px]"></div>
         </div>

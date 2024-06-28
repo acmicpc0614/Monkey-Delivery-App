@@ -6,7 +6,7 @@ const MostPopular = ({ title, picture }) => {
   return (
     <div className="mb-3 text-left">
       <img
-        className="w-[228px] h-[135px] cursor-pointer"
+        className="w-[228px] h-[135px] cursor-pointer xss:w-[280px] xss:h-[180px] transition-all"
         src={picture}
         onClick={() => {
           navigate("/food/items");
