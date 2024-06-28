@@ -20,7 +20,7 @@ const Offers = () => {
         <div className="text-[14px] text-[#7C7D7E] mt-4 ml-5">
           Find discounts, Offers special
         </div>
-        <div className="ml-5 w-[157px] sm:w-[40%] h-[30px] bg-[#FC6011] rounded-full mt-9 text-white text-xs flex flex-row justify-center items-center mb-[22px]">
+        <div className="ml-5 w-[157px] sm:w-[40%] h-[30px] xss:h-[40px] bg-[#FC6011] rounded-full mt-9 text-white text-xs flex flex-row justify-center items-center mb-[22px]">
           Check Offers
         </div>
         <div className="mb-24">
