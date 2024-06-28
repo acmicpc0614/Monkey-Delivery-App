@@ -1,12 +1,12 @@
-import previous from "./img/previous.svg";
-import map from "./img/map.svg";
-import star from "./img/star.svg";
-import forward from "./img/forward.svg";
-import target from "./img/position.svg";
+import previous from "./images/previous.svg";
+import map from "./images/map.svg";
+import star from "./images/star.svg";
+import forward from "./images/forward.svg";
+import target from "./images/position.svg";
 import { useState } from "react";
 
 const Address = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 150 });
   const changePosition = (e) => {
     var scroll = document.getElementById("scroll");
     setPosition(() => {
