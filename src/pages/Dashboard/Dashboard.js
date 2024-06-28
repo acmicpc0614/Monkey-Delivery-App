@@ -48,7 +48,11 @@ const Dashboard = () => {
               Good morninkg Akila!
             </div>
             <div>
-              <img src={shopping} alt="No image" />
+              <img
+                src={shopping}
+                alt="No image"
+                className="hover:animate-bounce"
+              />
             </div>
           </div>
           <div className="text-xs text-[#4A4B4D]">Delivering to</div>
@@ -63,12 +67,12 @@ const Dashboard = () => {
             </select>
           </div>
           <div className="bg-[#F2F2F2] flex flex-row items-center rounded-full w-full h-[45px] mb-[30px] my-5  px-5">
-            <div className="text-center text-xl text-[#4a4b4d] pr-5">
+            <div className="text-center text-xl text-[#676869] pr-5">
               <i className="fa fa-search font-sans"></i>
             </div>
             <div className="w-full ">
               <input
-                className=" bg-transparent focus:outline-none w-full "
+                className=" bg-transparent focus:outline-none w-full placeholder:italic"
                 placeholder="Search food"
               />
             </div>
