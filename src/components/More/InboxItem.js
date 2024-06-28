@@ -27,9 +27,11 @@ const InboxItem = ({ title, content, time }) => {
         </div>
         <div
           className="flex flex-col w-[60px] items-end justify-between"
-          style={{
-            flex: 2,
-          }}
+          style={
+            {
+              // flex: 2,
+            }
+          }
         >
           <div className="text-[9px] text-[#B6B7B7] line-clamp-1">{time}</div>
           <div className="mb-[19px]">
