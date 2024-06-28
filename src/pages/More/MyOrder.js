@@ -23,7 +23,7 @@ const MyOrder = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="w-screen">
+      <div className="w-screen mb-32">
         <div className="py-8 px-6">
           <div className="flex justify-start items-center gap-5">
             <div>

@@ -14,7 +14,6 @@ import { useNavigate } from "react-router-dom";
 const FoodItem = () => {
   const [portion, setPortion] = useState(2);
   const handleDecrease = () => {
-    console.log(4);
     if (portion > 0) setPortion(portion - 1);
   };
   const handleIncrease = () => {
