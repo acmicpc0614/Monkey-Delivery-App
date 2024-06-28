@@ -37,8 +37,8 @@ const Welcome = () => {
     <>
       <div className="flex flex-col px-[34px] items-center h-[812px]">
         <div className="mt-[112px] flex flex-col items-center">
-          <img className="h-[300px]" src={data[select].img} />
-          <img src={data[select].slide} className="mt-[32px]" />
+          <img className="h-[300px]" src={data[select].img} alt="noImg" />
+          <img src={data[select].slide} className="mt-[32px]" alt="noImg" />
         </div>
         <div className="mt-[32px] text-[28px] text-[#4A4B4D]">
           {data[select].title}

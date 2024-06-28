@@ -12,7 +12,7 @@ const FooterButton = (props) => {
         className="flex flex-col z-30 mb-7  items-center w-8 h-8 first:ml-4 last:mr-4"
         onClick={link}
       >
-        <img src={props.src} className="w-auto h-auto" />
+        <img src={props.src} className="w-auto h-auto" alt="noImg" />
         {props.page != props.type.toLowerCase() ? (
           <p className="text-xs text-slate-400">{props.type}</p>
         ) : (

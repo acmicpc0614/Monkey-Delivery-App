@@ -17,7 +17,7 @@ const MostPopular = ({ title, picture }) => {
         <p>Café</p>
         <div className="text-[#FC6011] ml-1 mr-1">·</div>
         <p>Western Food</p>
-        <img src={rating} />
+        <img src={rating} alt="noImg" />
         <p className="text-[#FC6011]">4.9</p>
       </div>
     </div>

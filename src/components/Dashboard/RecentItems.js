@@ -24,7 +24,7 @@ const RecentItems = ({ title, picture, country }) => {
           <p>{country}</p>
         </div>
         <div className="grid grid-flow-col justify-start items-center gap-2 text-xs text-[#4a4d4b]">
-          <img src={rating} />
+          <img src={rating} alt="noImg" />
           <p className="text-[#FC6011]">4.9</p>
           <p>(124 ratings)</p>
         </div>

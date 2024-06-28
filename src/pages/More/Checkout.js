@@ -55,7 +55,7 @@ const Checkout = () => {
       <div className=" flex flex-col mt-[33px] mb-32">
         <div className="flex flex-row items-center justify-between px-[22px]">
           <div className=" flex flex-row justify-center gap-5">
-            <img src={previous} onClick={handleBack} />
+            <img src={previous} onClick={handleBack} alt="noImg" />
             <div className=" text-[24px]  text-[#4A4B4D]">Checkout</div>
           </div>
         </div>
@@ -66,7 +66,12 @@ const Checkout = () => {
             <div className="text-[#4A4B4D] text-[15px] w-[160px] font-bold">
               653 Nostrand Ave., Brooklyn, NY 11216
             </div>
-            <div className="text-[#FC6011] text-[13px] font-bold cursor-pointer">
+            <div
+              className="text-[#FC6011] text-[13px] font-bold cursor-pointer"
+              onClick={() => {
+                navigate("/changeaddress");
+              }}
+            >
               Change
             </div>
           </div>

@@ -27,18 +27,22 @@ const MyOrder = () => {
         <div className="py-8 px-6">
           <div className="flex justify-start items-center gap-5">
             <div>
-              <img src={previous} onClick={() => navigate("/more")} />
+              <img
+                src={previous}
+                onClick={() => navigate("/more")}
+                alt="noImg"
+              />
             </div>
             <p className="text-2xl text-[#4A4B4D]">My Order</p>
           </div>
           <div className="flex justify-start gap-4 items-center flex-wrap text-xs text-[#B6B7B7] font-normal py-7">
             <div>
-              <img className="w-[80px] h-[80px]" src={sandwitch} />
+              <img className="w-[80px] h-[80px]" src={sandwitch} alt="noImg" />
             </div>
             <div className="flex flex-col gap-1">
               <p className="text-lg font-bold text-[#4A4B4D]">King Burgers</p>
               <div className="flex items-center gap-1">
-                <img src={star} />
+                <img src={star} alt="noImg" />
                 <p>4.9</p>
                 <p>(124 ratings)</p>
               </div>
@@ -48,7 +52,7 @@ const MyOrder = () => {
                 <p>Western Food</p>
               </div>
               <div className="flex items-center gap-2">
-                <img src={position} />
+                <img src={position} alt="noImg" />
                 <p>No 03, 4th Lane, Newyork</p>
               </div>
             </div>

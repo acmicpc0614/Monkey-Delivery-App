@@ -31,7 +31,7 @@ const Footer = () => {
         }}
       >
         <div className="justify-center flex -z-10  w-screen">
-          <img src={mainbg} className=" w-screen" />
+          <img src={mainbg} className=" w-screen" alt="noImg"/>
         </div>
         <div // home avatar
           className="flex justify-center z-50  items-center"
@@ -61,7 +61,7 @@ const Footer = () => {
               navigate("/menu");
             }}
           >
-            <img src={seletct === MENU ? menuActive : menu} />
+            <img src={seletct === MENU ? menuActive : menu} alt="noImg"/>
             <div
               className="text-[12px]"
               style={{
@@ -78,7 +78,7 @@ const Footer = () => {
               navigate("/offers");
             }}
           >
-            <img src={seletct === OFFERS ? bagActive : bag} />
+            <img src={seletct === OFFERS ? bagActive : bag} alt="noImg"/>
             <div
               className="text-[12px]"
               style={{
@@ -97,7 +97,7 @@ const Footer = () => {
               navigate("/profile");
             }}
           >
-            <img src={seletct === PROFILE ? profileActive : profile} />
+            <img src={seletct === PROFILE ? profileActive : profile} alt="noImg" />
             <div
               className="text-[12px]"
               style={{
@@ -114,7 +114,7 @@ const Footer = () => {
               navigate("/more");
             }}
           >
-            <img src={seletct === MORE ? moreActive : more} />
+            <img src={seletct === MORE ? moreActive : more} alt="noImg"/>
             <div
               className="text-[12px]"
               style={{
@@ -146,7 +146,11 @@ const Footer = () => {
           src={page == "home" ? home_red : home}
           onClick={move}
         />
-        <img className="absolute z-20 w-[100%] h-[92px]" src={mainbg} />
+        <img
+          className="absolute z-20 w-[100%] h-[92px]"
+          src={mainbg}
+          alt="noImg"
+        />
         <div className="flex flex-row justify-between w-[35%]">
           <FooterButton
             setPage={setPage}

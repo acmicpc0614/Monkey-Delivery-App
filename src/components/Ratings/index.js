@@ -41,15 +41,35 @@ const Ratings = () => {
   return (
     <>
       <div className="flex flex-row m-1 gap-2">
-        <img src={bg[State[btns[0].happy]]} onClick={() => btnClick(1)} />
+        <img
+          alt="noImg"
+          src={bg[State[btns[0].happy]]}
+          onClick={() => btnClick(1)}
+        />
 
-        <img src={bg[State[btns[1].happy]]} onClick={() => btnClick(2)} />
+        <img
+          alt="noImg"
+          src={bg[State[btns[1].happy]]}
+          onClick={() => btnClick(2)}
+        />
 
-        <img src={bg[State[btns[2].happy]]} onClick={() => btnClick(3)} />
+        <img
+          alt="noImg"
+          src={bg[State[btns[2].happy]]}
+          onClick={() => btnClick(3)}
+        />
 
-        <img src={bg[State[btns[3].happy]]} onClick={() => btnClick(4)} />
+        <img
+          alt="noImg"
+          src={bg[State[btns[3].happy]]}
+          onClick={() => btnClick(4)}
+        />
 
-        <img src={bg[State[btns[4].happy]]} onClick={() => btnClick(5)} />
+        <img
+          alt="noImg"
+          src={bg[State[btns[4].happy]]}
+          onClick={() => btnClick(5)}
+        />
       </div>
     </>
   );

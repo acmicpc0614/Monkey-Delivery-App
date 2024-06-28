@@ -1,5 +1,4 @@
-import { useState } from "react";
-import money from "../Address/img/money.svg";
+import money from "../Address/images/money.svg";
 import MonkeyBtn from "../../components/MonkeyBtn";
 const ThxModal = ({ setIsOpen }) => {
   return (
@@ -17,7 +16,7 @@ const ThxModal = ({ setIsOpen }) => {
           </div>
 
           <div className=" justify-center flex mt-3">
-            <img src={money} />
+            <img src={money} alt="money" />
           </div>
           <div className="flex flex-col px-[22px]">
             <div className="font-extrabold text-[26px] text-[#4A4B4D] text-center mt-[30px]">

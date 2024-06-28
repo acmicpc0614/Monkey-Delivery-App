@@ -9,7 +9,7 @@ const TopNavbar = () => {
           zIndex: 10000,
         }}
       >
-        <img src={topState} />
+        <img src={topState} alt="noImg" />
       </div>
     </>
   );

@@ -3,7 +3,6 @@ import bag from "./images/bag.svg";
 import ring from "./images/ring.svg";
 import mail from "./images/mail.svg";
 import info from "./images/info.svg";
-import previous from "./images/previous.svg";
 import bucket from "./images/shopping.svg";
 import Moreitem from "../../components/More/MoreItem";
 const Morepage = () => {
@@ -22,7 +21,7 @@ const Morepage = () => {
           <div className=" text-[24px]  text-[#4A4B4D]">More</div>
         </div>
         <div className=" items-center">
-          <img src={bucket} />
+          <img src={bucket} alt="noImg" />
         </div>
       </div>
       <div className="p-[22px]">

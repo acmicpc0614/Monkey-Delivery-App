@@ -2,12 +2,12 @@ import { useState } from "react";
 import Times from "./imgs/times.svg";
 const AddCreditModal = ({ setIsOpen, Plus }) => {
   const [cardDelete, setCardDelete] = useState(false);
-  const [cardNum, setCardNum] = useState();
-  const [month, setMonth] = useState();
-  const [year, setYear] = useState();
-  const [secCode, setSecCode] = useState();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  // const [cardNum, setCardNum] = useState();
+  // const [month, setMonth] = useState();
+  // const [year, setYear] = useState();
+  // const [secCode, setSecCode] = useState();
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
 
   const handleAddCard = () => {
     //Validate TODO
@@ -20,7 +20,7 @@ const AddCreditModal = ({ setIsOpen, Plus }) => {
         <div className="bg-[#ffffff] bottom-0 fixed rounded-t-3xl w-[100%] flex flex-row justify-center">
           <div className="  w-[88%] bg-[#FFFFFF] ">
             <div className="flex mt-3 flex-row justify-end">
-              <img src={Times} onClick={() => setIsOpen(false)} />
+              <img src={Times} onClick={() => setIsOpen(false)} alt="noImg" />
             </div>
             <div className="flex flex-row mt-3 mb-6 border-b-[1px] border-[#7070700a]">
               <p className="text-[14px] font-bold">Add Credit/Debit Card</p>
