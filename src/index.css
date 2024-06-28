@@ -74,11 +74,11 @@ code {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #FC6011;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #FC6011;
 }
 
 input:checked + .slider:before {
@@ -94,11 +94,11 @@ input:checked + .slider:before {
 }
 
 input:checked+.slider {
-  background-color: #2196F3;
+  background-color: #FC6011;
 }
 
 input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #FC6011;
 }
 
 input:checked+.slider:before {
