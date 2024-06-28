@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import star from "../../pages/Menu/images/star.svg"
 const FoodSlide = ({ img, description,rate,dessertName}) => {
-  return (
+    const navigator = useNavigate();
+    return (
+    
     <>
-      <div className="mb-1 flex flex-row items-end">
+      <div className="mb-1 flex flex-row items-end cursor-pointer">
         <div className="absolute mb-4" >
           <div className="px-5 text-base sm:text-3xl  font-bold text-white">
             {description}
@@ -14,7 +17,7 @@ const FoodSlide = ({ img, description,rate,dessertName}) => {
             <div className="text-white text-xs sm:text-base">Desserts</div>   
           </div>
         </div>
-        <img src={img} className="w-full " />
+        <img src={img} className="w-full cursor-pointer" onClick={() =>{navigator("items")}} />
       </div>
     </>
   );
