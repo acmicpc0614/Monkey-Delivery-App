@@ -19,7 +19,6 @@ import Payment from "./pages/More/Payment.js";
 import Welcome from "./pages/Login/Welcome.js";
 import Address from "./pages/Address/index.js";
 import InboxComponent from "./pages/More/InboxComponent.js";
-
 import TopNavbar from "./components/TopNavbar.js";
 import { useState } from "react";
 import MyOrder from "./pages/More/MyOrder.js";
