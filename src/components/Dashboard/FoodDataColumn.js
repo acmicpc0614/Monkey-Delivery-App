@@ -5,7 +5,7 @@ const FoodDataColumn = ({ title, picture }) => {
   return (
     <div className="">
       <img
-        className="w-[88px] h-[88px] cursor-pointer"
+        className="w-[88px] h-[88px] cursor-pointer sm:w-32 sm:h-32"
         src={picture}
         onClick={() => {
           navigate("/food/items");
