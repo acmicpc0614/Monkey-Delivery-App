@@ -8,10 +8,30 @@ import Chew from "../../pages/Menu/images/Fudgy Chewy Brownies.svg";
 
 const Food = () => {
   const slideContent = [
-    { img: ApplePie, description: "French Apple Pie",rate:4.9,dessertName:"Minute by tuk tuk" },
-    { img: DarkChoCa,description:"Dark Chocolate Cake",rate:4.7,dessertName:"Cakes by Tella" },
-    { img: StreetShake, description:"Street Shake" ,rate:4.9,dessertName:"Café Racer"},
-    { img: Chew, description:"Fudgy Chewy Brownies",rate:4.9,dessertName:"Minute by tuk tuk" },
+    {
+      img: ApplePie,
+      description: "French Apple Pie",
+      rate: 4.9,
+      dessertName: "Minute by tuk tuk",
+    },
+    {
+      img: DarkChoCa,
+      description: "Dark Chocolate Cake",
+      rate: 4.7,
+      dessertName: "Cakes by Tella",
+    },
+    {
+      img: StreetShake,
+      description: "Street Shake",
+      rate: 4.9,
+      dessertName: "Café Racer",
+    },
+    {
+      img: Chew,
+      description: "Fudgy Chewy Brownies",
+      rate: 4.9,
+      dessertName: "Minute by tuk tuk",
+    },
   ];
   return (
     <>
@@ -29,8 +49,14 @@ const Food = () => {
           ></input>
         </div>
         <div className="mt-[19px] mb-[17px]">
-          {slideContent.map((item) => (
-            <FoodSlide key={item._id} img={item.img} description={item.description} rate={item.rate} dessertName={item.dessertName}/>
+          {slideContent.map((item, i) => (
+            <FoodSlide
+              key={i}
+              img={item.img}
+              description={item.description}
+              rate={item.rate}
+              dessertName={item.dessertName}
+            />
           ))}
         </div>
       </div>
