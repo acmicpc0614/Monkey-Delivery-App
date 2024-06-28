@@ -5,7 +5,7 @@ import whiteCart from "./images/whiteCarting.svg";
 import heart from "./images/heart.svg";
 import rating from "./images/Star rating.svg";
 import Selector from "../../components/Menu/ItemSelector";
-import Operatebtn from "../../components/Menu/OperateBtn";
+
 import carting from "./images/onButtonCarting.svg";
 import { useState } from "react";
 import orangeCart from "./images/orangeCart.svg";
