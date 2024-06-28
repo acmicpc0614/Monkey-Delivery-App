@@ -18,7 +18,7 @@ const CheckoutPaymentItem = ({ img, title, chkIMG, id, setChkNum, chkNum }) => {
           <div className="w-[14px] h-[14px] rounded-full bg-[#EE5A30]" />
         ) : (
           <div className="w-[14px] h-[14px]">
-            <img src={chkIMG} />
+            <img src={chkIMG} alt="noImg" />
           </div>
         )}
       </div>

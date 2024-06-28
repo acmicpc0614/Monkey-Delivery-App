@@ -25,21 +25,27 @@ const FoodItem = () => {
   return (
     <>
       <div className="w-full flex flex-row justify-center relative">
-        <img src={pizza} className="w-full" />
-        <img src={contrastPlain} className="w-full absolute z-[10]" />
+        <img src={pizza} className="w-full" alt="noImg" />
+        <img
+          src={contrastPlain}
+          className="w-full absolute z-[10]"
+          alt="noImg"
+        />
         <div className="w-screen px-5 flex flex-row justify-between items-center mt-10 absolute z-[20]">
           <img
+            alt="noImg"
             src={backBtn}
             className="cursor-pointer"
             onClick={() => {
               handleNavigate();
             }}
           />
-          <img src={whiteCart} />
+          <img src={whiteCart} alt="noImg" />
         </div>
       </div>
       <div className="bg-white rounded-t-[42px] w-full h-[800px] -translate-y-14 px-5">
         <img
+          alt="noImg"
           src={heart}
           className="float-right -translate-y-1/2 hover:animate-ping"
         />
@@ -114,13 +120,13 @@ const FoodItem = () => {
                 LKR {750 * portion}
               </div>
               <div className="w-full h-[30px] mt-2 rounded-full bg-[#FC6011] flex flex-row text-white text-xs justify-center items-center mb-5">
-                <img src={carting} />
+                <img src={carting} alt="noImg" />
                 <p className="ml-[18px]">Add to Cart</p>
               </div>
             </div>
             <div className="flex flex-[2.6] justify-center items-center">
               <div className="w-12 h-12 rounded-full shadow-lg  justify-center items-center flex flex-row translate-x-1/2 bg-white hover:animate-ping">
-                <img src={orangeCart} />
+                <img src={orangeCart} alt="noImg" />
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ const Offers = () => {
       <div className="w-full">
         <div className="flex flex-row justify-between items-center mt-8  px-5">
           <p className="text-2xl text-[#4A4B4D]">Latest Offers</p>
-          <img src={shopCart} />
+          <img src={shopCart} alt="shopCart" />
         </div>
         <div className="text-[14px] text-[#7C7D7E] mt-4 ml-5">
           Find discounts, Offers special

@@ -1,4 +1,4 @@
 const Address = () => {
-  return <>Address</>;
+  return <></>;
 };
 export default Address;

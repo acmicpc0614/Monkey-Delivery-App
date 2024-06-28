@@ -23,7 +23,7 @@ const MenuBtn = ({ description, count, img }) => {
             <p className="text-[11px] text-[#B6B7B7] mt-[2px]">{count} Items</p>
           </div>
           <div className="w-8 h-8 flex flex-row justify-center rounded-full shadow-md items-center translate-x-1/2 bg-white cursor-pointer">
-            <img src={OrangeForward} className="w-[6px] h-3 " />
+            <img src={OrangeForward} className="w-[6px] h-3 " alt="noImg" />
           </div>
         </div>
       </div>

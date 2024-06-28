@@ -34,11 +34,15 @@ const Menu = () => {
       <div className="w-full px-5 mb-32">
         <div className="flex flex-row justify-between items-center mt-8">
           <p className="text-2xl text-[#4A4B4D]">Menu</p>
-          <img src={shopCart} />
+          <img src={shopCart} alt="noImg" />
         </div>
 
         <div className="w-full mt-6">
-          <img src={searchIcon} className="mt-3 ml-5 absolute z-10" />
+          <img
+            src={searchIcon}
+            className="mt-3 ml-5 absolute z-10"
+            alt="noImg"
+          />
           <input
             className="w-full h-11 placeholder:italic bg-[#F2F2F2] rounded-full indent-14 outline-none"
             placeholder="Search food"
