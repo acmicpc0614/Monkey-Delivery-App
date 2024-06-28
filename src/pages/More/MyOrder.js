@@ -7,20 +7,26 @@ import PriceList from "../../components/More/PriceList";
 
 const MyOrder = () => {
   const priceList = [
-    { food: "Beef Burger", price: "16" },
-    { food: "Classic Burger", price: "14" },
-    { food: "Cheese Chicken Burger", price: "17" },
-    { food: "Chicken Legs Basket", price: "15" },
-    { food: "French Fries Large", price: "6" },
+    { food: "Beef Burger", price: 16 },
+    { food: "Classic Burger", price: 14 },
+    { food: "Cheese Chicken Burger", price: 17 },
+    { food: "Chicken Legs Basket", price: 15 },
+    { food: "French Fries Large", price: 6 },
   ];
+  let total = 0;
+  {
+    priceList.map((item) => {
+      return (total += item.price);
+    });
+  }
   return (
     <>
       <div className="w-screen">
         <div className="py-8 px-6">
           <div className="flex justify-start items-center gap-5">
-            <di>
+            <div>
               <img src={previous} />
-            </di>
+            </div>
             <p className="text-2xl text-[#4A4B4D]">My Order</p>
           </div>
           <div className="flex justify-start gap-4 items-center flex-wrap text-xs text-[#B6B7B7] font-normal py-7">
@@ -36,7 +42,7 @@ const MyOrder = () => {
               </div>
               <div className="flex">
                 <p>Burger</p>
-                <div className="text-[#FC6011] ml-2 mr-2">·</div>
+                <div className="text-[#FC6011] ml-2 mr-3">·</div>
                 <p>Western Food</p>
               </div>
               <div className="flex items-center gap-2">
@@ -48,15 +54,35 @@ const MyOrder = () => {
         </div>
         <div className="bg-[#F6F6F6] px-5">
           {priceList.map((item, index) => {
-            return <PriceList food={item.food} price={item.price} />;
+            return (
+              <PriceList key={index} food={item.food} price={item.price} />
+            );
           })}
         </div>
         <div className="px-5">
           <div className="flex justify-between items-center py-3">
-            <p className="text-sm font-bold">Delivery Instrusctions</p>
-            <p>+</p>
-            <p>Add Notes</p>
+            <p className="text-sm font-bold text-[#4A4B4D]">
+              Delivery Instrusctions
+            </p>
+            <p className="text-[#FC6011] text-sm font-semibold">+ Add Notes</p>
           </div>
+          <hr></hr>
+          <div className="flex justify-between items-center py-3">
+            <p className="text-sm font-bold text-[#4A4B4D]">Sub Total</p>
+            <p className="text-[#FC6011] text-sm font-bold">${total}</p>
+          </div>
+          <div className="flex justify-between items-center pb-3">
+            <p className="text-sm font-bold text-[#4A4B4D]">Sub Total</p>
+            <p className="text-[#FC6011] text-sm font-bold">$2</p>
+          </div>
+          <hr></hr>
+          <div className="flex justify-between items-center py-3">
+            <p className="text-sm font-bold text-[#4A4B4D]">Total</p>
+            <p className="text-[#FC6011] text-2xl font-bold">$70</p>
+          </div>
+          <button className="w-full h-14 bg-[#FC6011] text-white rounded-full my-4">
+            Checkout
+          </button>
         </div>
       </div>
     </>
