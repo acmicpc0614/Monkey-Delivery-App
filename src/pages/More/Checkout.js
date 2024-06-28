@@ -6,6 +6,8 @@ import Paypalimg from "./images/paypal.svg";
 import CheckoutPaymentItem from "../../components/More/CheckoutPaymentItem";
 import { useState } from "react";
 import chkIMG from "./images/selectRing.svg";
+import CheckoutCalItem from "../../components/More/CheckoutCalItem";
+import MonkeyBtn from "../../components/MonkeyBtn";
 const Checkout = () => {
   const navigate = useNavigate();
   const handleBack = () => {
@@ -28,9 +30,24 @@ const Checkout = () => {
       title: "johndoe@email.com",
     },
   ];
+
+  const CalcData = [
+    {
+      title: "Sub Total",
+      money: 68,
+    },
+    {
+      title: "Delivery Cost",
+      money: 2,
+    },
+    {
+      title: "Discount",
+      money: -4,
+    },
+  ];
   return (
     <>
-      <div className=" flex flex-col mt-[33px]">
+      <div className=" flex flex-col mt-[33px] mb-32">
         <div className="flex flex-row items-center justify-between px-[22px]">
           <div className=" flex flex-row justify-center gap-5">
             <img src={previous} onClick={handleBack} />
@@ -56,7 +73,7 @@ const Checkout = () => {
           </div>
         </div>
 
-        <div className="px-[22px] gap-[13px] flex flex-col">
+        <div className="px-[22px] gap-[13px] flex flex-col pt-[20px]">
           {MethodData.map((item, i) => (
             <CheckoutPaymentItem
               img={item.img}
@@ -70,8 +87,22 @@ const Checkout = () => {
           ))}
         </div>
         <div className="bg-[#F6F6F6] w-full h-[12px] my-[18px]" />
+        <div className="px-[22px] gap-[13px] flex flex-col">
+          {CalcData.map((item, i) => (
+            <CheckoutCalItem key={i} title={item.title} money={item.money} />
+          ))}
+          <hr></hr>
+          <CheckoutCalItem title={"Total"} money={-66} />
+        </div>
 
         <div className="bg-[#F6F6F6] w-full h-[12px] my-[18px]" />
+        <div className="px-[22px]">
+          <MonkeyBtn
+            bgcolor={"#FC6011"}
+            bordercolor={"#FC6011"}
+            title={"Send Order"}
+          />
+        </div>
       </div>
     </>
   );
