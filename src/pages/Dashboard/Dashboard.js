@@ -44,7 +44,7 @@ const Dashboard = () => {
       <div className="py-3 w-dvw">
         <div className="px-5">
           <div className="flex justify-between items-center py-5">
-            <div className="text-lg font-medium text-[#4A4B4D] md:text-[40px] lg:text-[60px]">
+            <div className="text-lg font-medium text-[#4A4B4D] sm:text-[35px] md:text-[50px] transition-all">
               Good morninkg Akila!
             </div>
             <div>
@@ -68,7 +68,7 @@ const Dashboard = () => {
             </div>
             <div className="w-full ">
               <input
-                className=" bg-transparent focus:outline-none w-full"
+                className=" bg-transparent focus:outline-none w-full "
                 placeholder="Search food"
               />
             </div>

@@ -80,9 +80,7 @@ const FoodItem = () => {
             >
               -
             </div>
-            <div className="border-[1px] border-[#FC6011] rounded-full w-[47px] h-[30px] flex flex-row justify-center items-center text-[#FC6011] text-base mx-[5px]">
-              {portion}
-            </div>
+            <input className="border-[1px] border-[#FC6011] rounded-full w-[47px] h-[30px] flex flex-row justify-center items-center text-[#FC6011] text-base mx-[5px] focus:outline-none text-center" type="number" value={portion} onChange={(e)=>{setPortion(e.target.value)}}/>
             <div
               className="w-[52px] h-[30px] rounded-full bg-[#FC6011] text-white text-base flex flex-row justify-center items-center cursor-pointer"
               onClick={() => {
