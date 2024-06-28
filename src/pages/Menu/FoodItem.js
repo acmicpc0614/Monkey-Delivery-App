@@ -3,7 +3,6 @@ import contrastPlain from "./images/contrastPlain.svg";
 import backBtn from "./images/whiteBack.svg";
 import whiteCart from "./images/whiteCarting.svg";
 import heart from "./images/heart.svg";
-import rating from "./images/Star rating.svg";
 import Selector from "../../components/Menu/ItemSelector";
 import Ratings from "../../components/Ratings";
 
