@@ -2,6 +2,13 @@ import { useState } from "react";
 import Times from "./imgs/times.svg";
 const AddCreditModal = ({ setIsOpen, Plus }) => {
   const [cardDelete, setCardDelete] = useState(false);
+  const [cardNum, setCardNum] = useState();
+  const [month, setMonth] = useState();
+  const [year, setYear] = useState();
+  const [secCode, setSecCode] = useState();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
   const handleAddCard = () => {
     //Validate TODO
     setIsOpen(false);
@@ -20,9 +27,9 @@ const AddCreditModal = ({ setIsOpen, Plus }) => {
             </div>
             <div className="my-4">
               <input
-                type="text"
                 placeholder="Card Number"
                 className="h-14 w-full bg-[#F2F2F2] text-[14px] rounded-full indent-10 focus:outline-none"
+                type="number"
               />
             </div>
             <div className=" flex flex-row gap-[10%] items-center justify-between">
@@ -31,14 +38,16 @@ const AddCreditModal = ({ setIsOpen, Plus }) => {
               </div>
 
               <input
-                type="text"
+                type="number"
                 placeholder="MM"
+                maxLength={2}
                 className="rounded-full h-14 w-[28%] text-center bg-[#F2F2F2] focus:outline-none"
               />
 
               <input
-                type="text"
+                type="number"
                 placeholder="YY"
+                maxLength={2}
                 className="rounded-full h-14 w-[28%] text-center bg-[#F2F2F2]"
               />
             </div>

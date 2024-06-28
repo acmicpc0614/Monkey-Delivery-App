@@ -27,7 +27,7 @@ const MyOrder = () => {
         <div className="py-8 px-6">
           <div className="flex justify-start items-center gap-5">
             <div>
-              <img src={previous} />
+              <img src={previous} onClick={() => navigate("/more")} />
             </div>
             <p className="text-2xl text-[#4A4B4D]">My Order</p>
           </div>

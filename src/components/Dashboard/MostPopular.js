@@ -1,9 +1,17 @@
 import React from "react";
 import rating from "./images/star.png";
+import { useNavigate } from "react-router-dom";
 const MostPopular = ({ title, picture }) => {
+  const navigate = useNavigate();
   return (
     <div className="mb-3 text-left">
-      <img className="w-[228px] h-[135px]" src={picture} />
+      <img
+        className="w-[228px] h-[135px] cursor-pointer"
+        src={picture}
+        onClick={() => {
+          navigate("/food/items");
+        }}
+      />
       <p className="pt-1 pb-3 text-lg">{title}</p>
       <div className="grid grid-flow-col justify-start items-center gap-2 text-xs text-[#B6B7B7]">
         <p>Café</p>

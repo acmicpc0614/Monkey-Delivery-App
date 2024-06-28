@@ -2,7 +2,7 @@ const CheckoutPaymentItem = ({ img, title, chkIMG, id, setChkNum, chkNum }) => {
   return (
     <>
       <div
-        className="w-full h-[43px] bg-[#F6F6F6] px-[21px] items-center justify-between flex flex-row rounded-md"
+        className="w-full h-[43px] bg-[#F6F6F6] px-[21px] items-center justify-between flex flex-row rounded-md cursor-pointer"
         style={{
           border: "1px solid #d6d6d6",
         }}

@@ -1,10 +1,18 @@
 import React from "react";
 import rating from "./images/star.png";
+import { useNavigate } from "react-router-dom";
 const RecentItems = ({ title, picture, country }) => {
+  const navigate = useNavigate();
   return (
     <div className="grid grid-flow-col justify-start py-3">
       <div className="">
-        <img className="w-[75px] h-[75px] ml-auto mr-auto" src={picture}></img>
+        <img
+          className="w-[75px] h-[75px] ml-auto mr-auto cursor-pointer"
+          onClick={() => {
+            navigate("/food/items");
+          }}
+          src={picture}
+        ></img>
       </div>
       <div className="px-5 py-1">
         <p className="font-bold text-[#4A4D4B] py-1 text-lg">{title}</p>

@@ -66,7 +66,9 @@ const Checkout = () => {
             <div className="text-[#4A4B4D] text-[15px] w-[160px] font-bold">
               653 Nostrand Ave., Brooklyn, NY 11216
             </div>
-            <div className="text-[#FC6011] text-[13px] font-bold">Change</div>
+            <div className="text-[#FC6011] text-[13px] font-bold cursor-pointer">
+              Change
+            </div>
           </div>
         </div>
 
@@ -74,7 +76,7 @@ const Checkout = () => {
         <div className="px-[22px] text-center justify-between flex">
           <div className="text-[#7C7D7E] text-[13px]">Payment method</div>
           <div
-            className="text-[#FC6011] text-[13px] font-bold"
+            className="text-[#FC6011] text-[13px] font-bold cursor-pointer"
             onClick={() => {
               setIsOpen(true);
             }}
@@ -107,7 +109,7 @@ const Checkout = () => {
 
         <div className="bg-[#F6F6F6] w-full h-[12px] my-[18px]" />
         <div
-          className="px-[22px]"
+          className="px-[22px] cursor-pointer"
           onClick={() => {
             setThxisOpen(true);
           }}
