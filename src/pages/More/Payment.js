@@ -19,7 +19,7 @@ const Payment = () => {
 	};
 	return (
 		<>
-			<div className="flex   max-w-2xl flex-col  w-[88%]  ">
+			<div className="flex   max-w-2xl flex-col px-[22px] ">
 				<div className="flex flex-col border-b-[1px] mt-8">
 					<div className="flex flex-row justify-between mt-7 mb-6">
 						<div className="flex flex-row justify-end  items-center gap-5">
@@ -82,7 +82,7 @@ const Payment = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex   max-w-2xl flex-col  w-[88%]  ">
+			<div className="flex   max-w-2xl flex-col px-[22px] ">
 				<div className="mt-[40px]">
 					<button
 						className="flex flex-row gap-3 items-center justify-center h-14 w-[100%] px-3 text-[1rem] font-semibold rounded-full bg-[#FC6011]  text-[white]"

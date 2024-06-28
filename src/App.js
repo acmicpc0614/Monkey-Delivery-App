@@ -13,7 +13,7 @@ import Checkout from "./pages/More/Checkout.js";
 import Footer from "./components/Footer";
 import Splash from "./pages/Splash/index.js";
 import Food from "./pages/Menu/Food.js";
-import Item from "./pages/Menu/ItemModal.js";
+import Item from "./pages/Menu/FoodItem.js";
 import Notification from "./pages/More/Notification.js";
 import Payment from "./pages/More/Payment.js";
 import Welcome from "./pages/Login/Welcome.js";
@@ -27,7 +27,7 @@ export default function App() {
 	const [islogin, setIslogin] = useState(false);
 
 	return (
-		<div className="main-container flex flex-col items-center">
+		<div className="main-container flex flex-col">
 			{/* <TopNavbar /> */}
 			<BrowserRouter>
 				<Routes>
