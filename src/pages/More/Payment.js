@@ -4,10 +4,18 @@ import Check from "./imgs/check.svg";
 import Visa from "./imgs/visa.svg";
 import Plus from "./imgs/Plus.svg";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import AddCreditModal from "./AddCreditModal";
 const Payment = () => {
 	const nav = useNavigate("/");
+
+	const [isOpen, setIsOpen] = useState(false);
+
 	const handleClick = () => {
 		nav("/more");
+	};
+	const handleAddCard = () => {
+		setIsOpen(true);
 	};
 	return (
 		<>
@@ -78,13 +86,13 @@ const Payment = () => {
 				<div className="mt-[40px]">
 					<button
 						className="flex flex-row gap-3 items-center justify-center h-14 w-[100%] px-3 text-[1rem] font-semibold rounded-full bg-[#FC6011]  text-[white]"
-						type="submit">
+						onClick={handleAddCard}>
 						<img alt="Noimg" className="max-w-none" src={Plus} />
-
 						<p>Add Another Credit/Debit Card</p>
 					</button>
 				</div>
 			</div>
+			{isOpen && <AddCreditModal setIsOpen={setIsOpen} Plus={Plus} />}
 		</>
 	);
 };
