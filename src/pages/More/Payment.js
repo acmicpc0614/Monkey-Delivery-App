@@ -11,19 +11,19 @@ const Payment = () => {
 	};
 	return (
 		<>
-			<div className="flex min-w-80  max-w-2xl flex-col  w-[88%]  ">
+			<div className="flex   max-w-2xl flex-col  w-[88%]  ">
 				<div className="flex flex-col border-b-[1px] mt-8">
 					<div className="flex flex-row justify-between mt-7 mb-6">
 						<div className="flex flex-row justify-end  items-center gap-5">
 							<div>
-								<img src={Arrow} onClick={() => handleClick()} />
+								<img alt="Noimg" src={Arrow} onClick={() => handleClick()} />
 							</div>
 							<div>
 								<p className=" text-[24px] text-[#4A4B4D]">Payment Details</p>
 							</div>
 						</div>
 						<div className="flex">
-							<img src={Busket} />
+							<img alt="Noimg" src={Busket} />
 						</div>
 					</div>
 					<div className="flex flex-row justify-start pb-3 ">
@@ -43,17 +43,15 @@ const Payment = () => {
 								</p>
 							</div>
 							<div className="flex flex-row">
-								<img src={Check} />
+								<img alt="Noimg" src={Check} />
 							</div>
 						</div>
 						<div className="flex flex-row justify-between p-2 items-center pb-4 border-b-[1px] gap-3">
 							<div className="flex items-center flex-row gap-4">
 								<div className="">
-									<img className=" h-7  max-w-none" src={Visa} />
+									<img alt="Noimg" className=" h-7  max-w-none" src={Visa} />
 								</div>
-								<div className="">
-									<p className="h-2 text-[#4A4B4D]">**** **** </p>
-								</div>
+								<div className=" text-[#4A4B4D] text-[12px]">**** ****</div>
 							</div>
 							<div className="flex flex-1 flex-row  items-center justify-between">
 								<div>
@@ -76,12 +74,12 @@ const Payment = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex min-w-80  max-w-2xl flex-col  w-[88%]  ">
+			<div className="flex   max-w-2xl flex-col  w-[88%]  ">
 				<div className="mt-[40px]">
 					<button
 						className="flex flex-row gap-3 items-center justify-center h-14 w-[100%] px-3 text-[1rem] font-semibold rounded-full bg-[#FC6011]  text-[white]"
 						type="submit">
-						<img className="max-w-none" src={Plus} />
+						<img alt="Noimg" className="max-w-none" src={Plus} />
 
 						<p>Add Another Credit/Debit Card</p>
 					</button>
