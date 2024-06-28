@@ -6,7 +6,6 @@ import Beverage from "./images/beverage.svg";
 import Promotions from "./images/promotions.png";
 import Desserts from "./images/desserts.png";
 
-
 const Menu = () => {
   const btnContent = [
     {
@@ -35,32 +34,33 @@ const Menu = () => {
       <div className="w-full px-5 mb-32">
         <div className="flex flex-row justify-between items-center mt-8">
           <p className="text-2xl text-[#4A4B4D]">Menu</p>
-          <img src={shopCart} />
+          <img src={shopCart} alt="noImg" />
         </div>
 
         <div className="w-full mt-6">
-          <img src={searchIcon} className="mt-3 ml-5 absolute z-10" />
+          <img
+            src={searchIcon}
+            className="mt-3 ml-5 absolute z-10"
+            alt="noImg"
+          />
           <input
-            className="w-full h-11 bg-[#F2F2F2] rounded-full indent-14 outline-none"
+            className="w-full h-11 placeholder:italic bg-[#F2F2F2] rounded-full indent-14 outline-none"
             placeholder="Search food"
           ></input>
         </div>
         <div className="flex flex-col mt-9">
-        <div className="w-[97px] h-[485px] rounded-r-[38px] bg-[#FC6011] fixed z-[-30] -translate-x-5 mb-[52px]"/>
-          {btnContent.map((item) => (
+          <div className="w-[97px] h-[485px] rounded-r-[38px] bg-[#FC6011] fixed z-[-30] -translate-x-5 mb-[52px]" />
+          {btnContent.map((item, i) => (
             <MenuBtn
-              key={item._id}
+              key={i}
               description={item.description}
               count={item.count}
               img={item.img}
             />
           ))}
         </div>
-        
       </div>
-      
     </>
-
   );
 };
 

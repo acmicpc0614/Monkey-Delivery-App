@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import MonkeyBtn from "../../components/MonkeyBtn";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 const OPTinputItem = ({ val, setVal, num }) => {
   return (
     <input

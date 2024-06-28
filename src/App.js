@@ -19,45 +19,43 @@ import Payment from "./pages/More/Payment.js";
 import Welcome from "./pages/Login/Welcome.js";
 import Address from "./pages/Address/index.js";
 import InboxComponent from "./pages/More/InboxComponent.js";
-
 import TopNavbar from "./components/TopNavbar.js";
 import { useState } from "react";
 import MyOrder from "./pages/More/MyOrder.js";
 import AboutComp from "./pages/More/AboutComp";
-
 export default function App() {
-  const [islogin, setIslogin] = useState(false);
+	const [islogin, setIslogin] = useState(false);
 
-  return (
-    <div className="main-container flex flex-col">
-      {/* <TopNavbar /> */}
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Splash />} />
-          <Route path="/login" element={<Login setIslogin={setIslogin} />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/reset" element={<Reset />} />
-          <Route path="/otp" element={<OPT />} />
-          <Route path="/newpwd" element={<NewPassword />} />
-          <Route pash="/dashboard" element={<Dashboard />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/food" element={<Food />} />
-          <Route path="/food/items" element={<Item />} />
-          <Route path="/offers" element={<Offers />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/more" element={<Morepage />} />
-          <Route path="/aboutus" element={<AboutComp />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/welcome" element={<Welcome />} />
-          <Route path="/inbox" element={<InboxComponent />} />
-          <Route path="/notification" element={<Notification />} />
-          <Route path="/myorder" element={<MyOrder />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/changeaddress" element={<Address />} />
-          <Route path="*" element={<Dashboard />} />
-        </Routes>
-        {islogin && <Footer />}
-      </BrowserRouter>
-    </div>
-  );
+	return (
+		<div className="main-container flex flex-col">
+			{/* <TopNavbar /> */}
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Splash />} />
+					<Route path="/login" element={<Login setIslogin={setIslogin} />} />
+					<Route path="/signup" element={<Signup />} />
+					<Route path="/reset" element={<Reset />} />
+					<Route path="/otp" element={<OPT />} />
+					<Route path="/newpwd" element={<NewPassword />} />
+					<Route pash="/dashboard" element={<Dashboard />} />
+					<Route path="/menu" element={<Menu />} />
+					<Route path="/food" element={<Food />} />
+					<Route path="/food/items" element={<Item />} />
+					<Route path="/offers" element={<Offers />} />
+					<Route path="/profile" element={<Profile />} />
+					<Route path="/more" element={<Morepage />} />
+					<Route path="/aboutus" element={<AboutComp />} />
+					<Route path="/payment" element={<Payment />} />
+					<Route path="/welcome" element={<Welcome />} />
+					<Route path="/inbox" element={<InboxComponent />} />
+					<Route path="/notification" element={<Notification />} />
+					<Route path="/myorder" element={<MyOrder />} />
+					<Route path="/checkout" element={<Checkout />} />
+					<Route path="/changeaddress" element={<Address />} />
+					<Route path="*" element={<Dashboard />} />
+				</Routes>
+				{islogin && <Footer />}
+			</BrowserRouter>
+		</div>
+	);
 }

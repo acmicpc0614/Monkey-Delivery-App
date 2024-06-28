@@ -57,13 +57,13 @@ const Profiler = () => {
   ];
 
   return (
-    <div className="px-[22px]">
+    <div className="px-[22px] mb-[120px]">
       <div className=" mt-[33px] flex flex-row items-center justify-between ">
         <div className="items-center">
           <div className=" text-[24px]  text-[#4A4B4D]">Profile</div>
         </div>
         <div className=" items-center">
-          <img src={bucket} />
+          <img src={bucket} alt="bucket" />
         </div>
       </div>
       <div className="justify-center flex mt-[30px] flex-col">
