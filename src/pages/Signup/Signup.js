@@ -1,73 +1,113 @@
 import { useNavigate } from "react-router-dom";
 import MonkeyBtn from "../../components/MonkeyBtn";
 import { useState } from "react";
+import Data from "../../data/Data.json";
+const DataInputComp = ({ placetitle, data, idValue, onChangeFn }) => {
+  return (
+    <input
+      className="w-full focus:outline-none my-4 rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
+      placeholder={placetitle}
+      value={data}
+      id={idValue}
+      onChange={(e) => {
+        onChangeFn(e.target.value);
+      }}
+    />
+  );
+};
 const Signup = () => {
   const navigator = useNavigate();
   const handleLogin = () => {
     navigator("/login");
   };
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMoblie] = useState("");
+  const [emailAdd, setEmailAdd] = useState("");
+  const [mobileno, setMoblieNo] = useState("");
   const [address, setAddress] = useState("");
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
 
-  // "id": 0,
-  // "name": "admin",
-  // "email": "admin",
-  // "mobileno": "123456789",
-  // "address": "The Earth",
-  // "Password": "123456"
+  const inputSerial = [
+    {
+      placetitle: "name",
+      data: name,
+      idValue: "name",
+      onChangeFn: setName,
+    },
+    {
+      placetitle: "Email",
+      data: emailAdd,
+      idValue: "emailAdd",
+      onChangeFn: setEmailAdd,
+    },
+    {
+      placetitle: "Mobile No",
+      data: mobileno,
+      idValue: "mobileno",
+      onChangeFn: setMoblieNo,
+    },
+    {
+      placetitle: "Address",
+      data: address,
+      idValue: "address",
+      onChangeFn: setAddress,
+    },
+    {
+      placetitle: "Password",
+      data: password,
+      idValue: "pwd1",
+      onChangeFn: setPassword,
+    },
+    {
+      placetitle: "Confirm Password",
+      data: password2,
+      idValue: "pwd2",
+      onChangeFn: setPassword2,
+    },
+  ];
+
+  const handleSignUp = () => {
+    if (
+      password !== password2 ||
+      !password.trim() ||
+      !name.trim() ||
+      !emailAdd.trim()
+    )
+      return;
+    const Users = Data.Users;
+    const user = {
+      id: Users.length,
+      name: name,
+      email: emailAdd,
+      mobileno: mobileno,
+      address: address,
+      Password: password,
+    };
+    Users.push(user);
+    console.log(Users);
+    navigator("/welcome");
+  };
+
   return (
     <>
       <div className="bg-white px-8 pt-14 pb-10 text-center h-[812px] content-between">
-        <div className="text-center text-3xl">Sign Up</div>
-        <div className="pt-2 text-[#7C7D7E] text-sm">
+        <div className="text-center text-3xl text-[#4A4B4D]">Sign Up</div>
+        <div className="pt-2 text-[#7C7D7E] text-sm mb-5">
           Add your details to sign up
         </div>
-        <div className="pt-8">
-          <input
-            className="w-full rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
-            placeholder="Name"
+
+        {inputSerial.map((item) => (
+          <DataInputComp
+            key={item.idValue}
+            placetitle={item.placetitle}
+            data={item.name}
+            idValue={item.idValue}
+            onChangeFn={item.onChangeFn}
           />
-        </div>
-        <div className="pt-7">
-          <input
-            className="w-full rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
-            placeholder="Email"
-          />
-        </div>
-        <div className="pt-7">
-          <input
-            className="w-full rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
-            placeholder="Mobile No"
-          />
-        </div>
-        <div className="pt-7">
-          <input
-            className="w-full rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
-            placeholder="Address"
-          />
-        </div>
-        <div className="pt-7">
-          <input
-            className="w-full rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
-            placeholder="Password"
-          />
-        </div>
-        <div className="py-7">
-          <input
-            className="w-full rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
-            placeholder="Confirm Password"
-          />
-        </div>
-        <div
-          className="w-full hand"
-          onClick={() => {
-            navigator("/welcome");
-          }}
-        >
-          <MonkeyBtn bgcolor={"#FC6011"} title={"Sign up"} />
+        ))}
+
+        <div className="w-full cursor-pointer mt-2" onClick={handleSignUp}>
+          <MonkeyBtn bgcolor={"#FC6011"} title={"Sign Up"} />
         </div>
         <div className="flex justify-center pt-6 gap-1">
           <div className="text-[#7C7D7E] text-sm self-center">
@@ -78,7 +118,7 @@ const Signup = () => {
               className="bg-transparent text-[#FC6011] self-center"
               onClick={() => handleLogin()}
             >
-              <b>Log in</b>
+              <b>Login</b>
             </button>
           </div>
         </div>
