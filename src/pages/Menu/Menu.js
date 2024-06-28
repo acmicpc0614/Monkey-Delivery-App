@@ -6,7 +6,6 @@ import Beverage from "./images/beverage.svg";
 import Promotions from "./images/promotions.png";
 import Desserts from "./images/desserts.png";
 
-
 const Menu = () => {
   const btnContent = [
     {
@@ -46,21 +45,18 @@ const Menu = () => {
           ></input>
         </div>
         <div className="flex flex-col mt-9">
-        <div className="w-[97px] h-[485px] rounded-r-[38px] bg-[#FC6011] fixed z-[-30] -translate-x-5 mb-[52px]"/>
-          {btnContent.map((item) => (
+          <div className="w-[97px] h-[485px] rounded-r-[38px] bg-[#FC6011] fixed z-[-30] -translate-x-5 mb-[52px]" />
+          {btnContent.map((item, i) => (
             <MenuBtn
-              key={item._id}
+              key={i}
               description={item.description}
               count={item.count}
               img={item.img}
             />
           ))}
         </div>
-        
       </div>
-      
     </>
-
   );
 };
 
