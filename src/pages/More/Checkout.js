@@ -8,8 +8,11 @@ import { useState } from "react";
 import chkIMG from "./images/selectRing.svg";
 import CheckoutCalItem from "../../components/More/CheckoutCalItem";
 import MonkeyBtn from "../../components/MonkeyBtn";
+import AddCreditModal from "./AddCreditModal";
+import Plus from "./imgs/Plus.svg";
 const Checkout = () => {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
   const handleBack = () => {
     navigate("/more");
   };
@@ -68,7 +71,12 @@ const Checkout = () => {
         <div className=" bg-[#F6F6F6] w-full h-[12px] my-[18px]" />
         <div className="px-[22px] text-center justify-between flex">
           <div className="text-[#7C7D7E] text-[13px]">Payment method</div>
-          <div className="text-[#FC6011] text-[13px] font-bold">
+          <div
+            className="text-[#FC6011] text-[13px] font-bold"
+            onClick={() => {
+              setIsOpen(true);
+            }}
+          >
             +&nbsp;Add Card
           </div>
         </div>
@@ -104,6 +112,7 @@ const Checkout = () => {
           />
         </div>
       </div>
+      {isOpen && <AddCreditModal setIsOpen={setIsOpen} Plus={Plus} />}
     </>
   );
 };
