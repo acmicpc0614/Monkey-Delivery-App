@@ -10,9 +10,11 @@ import CheckoutCalItem from "../../components/More/CheckoutCalItem";
 import MonkeyBtn from "../../components/MonkeyBtn";
 import AddCreditModal from "./AddCreditModal";
 import Plus from "./imgs/Plus.svg";
+import ThxModal from "./ThxModal";
 const Checkout = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const [ThxisOpen, setThxisOpen] = useState(false);
   const handleBack = () => {
     navigate("/more");
   };
@@ -104,7 +106,12 @@ const Checkout = () => {
         </div>
 
         <div className="bg-[#F6F6F6] w-full h-[12px] my-[18px]" />
-        <div className="px-[22px]">
+        <div
+          className="px-[22px]"
+          onClick={() => {
+            setThxisOpen(true);
+          }}
+        >
           <MonkeyBtn
             bgcolor={"#FC6011"}
             bordercolor={"#FC6011"}
@@ -113,6 +120,7 @@ const Checkout = () => {
         </div>
       </div>
       {isOpen && <AddCreditModal setIsOpen={setIsOpen} Plus={Plus} />}
+      {ThxisOpen && <ThxModal setIsOpen={setThxisOpen} />}
     </>
   );
 };

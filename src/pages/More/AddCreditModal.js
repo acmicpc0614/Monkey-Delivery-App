@@ -22,7 +22,6 @@ const AddCreditModal = ({ setIsOpen, Plus }) => {
               <input
                 type="text"
                 placeholder="Card Number"
-                value=""
                 className="h-14 w-full bg-[#F2F2F2] text-[14px] rounded-full indent-10 focus:outline-none"
               />
             </div>
@@ -47,7 +46,6 @@ const AddCreditModal = ({ setIsOpen, Plus }) => {
               <input
                 type="text"
                 placeholder="Security Code"
-                value=""
                 className="h-14 w-full bg-[#F2F2F2] text-[14px] rounded-full indent-10 focus:outline-none"
               />
             </div>
@@ -55,7 +53,6 @@ const AddCreditModal = ({ setIsOpen, Plus }) => {
               <input
                 type="text"
                 placeholder="First Name"
-                value=""
                 className="h-14 w-full bg-[#F2F2F2] text-[14px] rounded-full indent-10 focus:outline-none"
               />
             </div>
@@ -63,7 +60,6 @@ const AddCreditModal = ({ setIsOpen, Plus }) => {
               <input
                 type="text"
                 placeholder="Last Name Name"
-                value=""
                 className="h-14 w-full bg-[#F2F2F2] text-[14px] rounded-full indent-10 focus:outline-none"
               />
             </div>
