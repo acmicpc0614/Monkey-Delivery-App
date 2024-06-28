@@ -35,7 +35,7 @@ const Food = () => {
   ];
   return (
     <>
-      <div className="w-full">
+      <div className="w-full mb-[120px]">
         <div className="flex flex-row justify-between items-center mt-8  px-5">
           <p className="text-2xl text-[#4A4B4D]">Menu</p>
           <img src={shopCart} />

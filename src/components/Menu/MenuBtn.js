@@ -8,7 +8,12 @@ const MenuBtn = ({ description, count, img }) => {
   };
   return (
     <div>
-      <div className="w-full  h-[87px] flex flex-row justify-between items-center mt-6">
+      <div
+        className="w-full  h-[87px] flex flex-row justify-between items-center mt-6"
+        onClick={() => {
+          handleGoDesserts();
+        }}
+      >
         <div className=" w-full h-[87px] rounded-l-[30px] rounded-r-[10px] shadow-md ml-[38px] mr-[15px] flex flex-row items-center justify-between bg-white">
           <img src={img} className="items-center -translate-x-1/2" />
           <div className="absolute z-10 ml-14">
@@ -17,12 +22,7 @@ const MenuBtn = ({ description, count, img }) => {
             </p>
             <p className="text-[11px] text-[#B6B7B7] mt-[2px]">{count} Items</p>
           </div>
-          <div
-            className="w-8 h-8 flex flex-row justify-center rounded-full shadow-md items-center translate-x-1/2 bg-white cursor-pointer"
-            onClick={() => {
-              handleGoDesserts();
-            }}
-          >
+          <div className="w-8 h-8 flex flex-row justify-center rounded-full shadow-md items-center translate-x-1/2 bg-white cursor-pointer">
             <img src={OrangeForward} className="w-[6px] h-3 " />
           </div>
         </div>

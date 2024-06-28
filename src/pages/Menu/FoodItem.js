@@ -3,8 +3,9 @@ import contrastPlain from "./images/contrastPlain.svg";
 import backBtn from "./images/whiteBack.svg";
 import whiteCart from "./images/whiteCarting.svg";
 import heart from "./images/heart.svg";
-import rating from "./images/Star rating.svg";
 import Selector from "../../components/Menu/ItemSelector";
+import Ratings from "../../components/Ratings";
+
 import carting from "./images/onButtonCarting.svg";
 import { useState } from "react";
 import orangeCart from "./images/orangeCart.svg";
@@ -12,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 const FoodItem = () => {
   const [portion, setPortion] = useState(2);
   const handleDecrease = () => {
-    console.log(4);
     if (portion > 0) setPortion(portion - 1);
   };
   const handleIncrease = () => {
@@ -45,7 +45,8 @@ const FoodItem = () => {
         </div>
         <div className="flex flex-row w-full mt-[6px]">
           <div className="basis-1/2">
-            <img src={rating} />
+            {/* <img src={rating} /> */}
+            <Ratings />
             <p className="mt-1 text-[#EE5A30]">4 Star Ratings</p>
           </div>
           <div className="basis-1/2 mt-[9px] flex flex-col items-end">
