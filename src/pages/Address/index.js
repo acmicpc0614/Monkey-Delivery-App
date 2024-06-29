@@ -4,9 +4,11 @@ import star from "./images/star.svg";
 import forward from "./images/forward.svg";
 import target from "./images/position.svg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Address = () => {
   const [position, setPosition] = useState({ x: 0, y: 150 });
+  const navigate = useNavigate();
   const changePosition = (e) => {
     var scroll = document.getElementById("scroll");
     setPosition(() => {
@@ -18,11 +20,17 @@ const Address = () => {
   };
   return (
     <>
-      <div className="w-full ">
+      <div className="w-full mb-32">
         <div className="py-8 px-6 ">
           <div className="flex justify-start items-center gap-5">
             <div>
-              <img src={previous} alt="No image" />
+              <img
+                src={previous}
+                alt="No image"
+                onClick={() => {
+                  navigate("/checkout");
+                }}
+              />
             </div>
             <p className="text-2xl text-[#4A4B4D]">Change Address</p>
           </div>
@@ -40,6 +48,7 @@ const Address = () => {
           >
             <img
               src={target}
+              alt="noImg"
               // className="translate-x-[-50%] translate-y-[-130%]"
             />
           </div>
@@ -52,7 +61,7 @@ const Address = () => {
             </div>
             <div className="">
               <input
-                className=" bg-transparent focus:outline-none"
+                className=" bg-transparent focus:outline-none hover:italic"
                 placeholder="Search food"
               />
             </div>
