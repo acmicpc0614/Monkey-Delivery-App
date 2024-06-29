@@ -2,13 +2,14 @@ import { useNavigate } from "react-router-dom";
 import MonkeyBtn from "../../components/MonkeyBtn";
 import { useState } from "react";
 import Data from "../../data/Data.json";
-const DataInputComp = ({ placetitle, data, idValue, onChangeFn }) => {
+const DataInputComp = ({ placetitle, data, idValue, onChangeFn, type }) => {
   return (
     <input
       className="w-full focus:outline-none my-4 rounded-full bg-[#F2F2F2] px-8 py-3 text-sm h-14"
       placeholder={placetitle}
       value={data}
       id={idValue}
+      type={type}
       onChange={(e) => {
         onChangeFn(e.target.value);
       }}
@@ -31,36 +32,42 @@ const Signup = () => {
     {
       placetitle: "name",
       data: name,
+      type: "text",
       idValue: "name",
       onChangeFn: setName,
     },
     {
       placetitle: "Email",
       data: emailAdd,
+      type: "text",
       idValue: "emailAdd",
       onChangeFn: setEmailAdd,
     },
     {
       placetitle: "Mobile No",
       data: mobileno,
+      type: "text",
       idValue: "mobileno",
       onChangeFn: setMoblieNo,
     },
     {
       placetitle: "Address",
       data: address,
+      type: "text",
       idValue: "address",
       onChangeFn: setAddress,
     },
     {
       placetitle: "Password",
       data: password,
+      type: "password",
       idValue: "pwd1",
       onChangeFn: setPassword,
     },
     {
       placetitle: "Confirm Password",
       data: password2,
+      type: "password",
       idValue: "pwd2",
       onChangeFn: setPassword2,
     },
@@ -103,6 +110,7 @@ const Signup = () => {
             data={item.name}
             idValue={item.idValue}
             onChangeFn={item.onChangeFn}
+            type={item.type}
           />
         ))}
 

@@ -13,11 +13,11 @@ const Notification = () => {
       <div className="p-[22px] flex flex-col mt-[33px]">
         <div className="flex flex-row items-center justify-between ">
           <div className=" flex flex-row justify-center gap-5">
-            <img src={previous} onClick={handleBack} />
+            <img alt="noImg" src={previous} onClick={handleBack} />
             <div className=" text-[24px]  text-[#4A4B4D]">Notifications</div>
           </div>
           <div className="justify-end items-center">
-            <img src={bucket} />
+            <img alt="noImg" src={bucket} />
           </div>
         </div>
       </div>

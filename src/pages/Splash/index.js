@@ -1,8 +1,6 @@
 import backgroundIMG from "./images/background.png";
 import avatar from "./images/avatar.svg";
-import MonkeyBtn from "../../components/MonkeyBtn";
 import bubble from "./images/bubble.svg";
-import shadowIMG from "./images/shadowIMG.svg";
 import splash from "./images/splash.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -19,17 +17,17 @@ const Splash = () => {
     <>
       {flag ? (
         <div>
-          <img src={splash} className="w-screen" />
+          <img alt="noImg" src={splash} className="w-screen" />
         </div>
       ) : (
         <div className="flex flex-col items-center">
           <div className="w-screen">
-            <img src={bubble} className="absolute z-50 w-screen " />
+            <img alt="noImg" src={bubble} className="absolute z-50 w-screen " />
 
-            <img src={backgroundIMG} className="w-screen " />
+            <img alt="noImg" src={backgroundIMG} className="w-screen " />
           </div>
           <div className="flex flex-col items-center color-[#7C7D7E]  -translate-y-16">
-            <img src={avatar} />
+            <img alt="noImg" src={avatar} />
             <div className="flex flex-row  text-[34px] font-bold">
               <div className="text-[#FC6011]">Meal</div>
               <div className="text-[#4A4B4D]">MonKey</div>

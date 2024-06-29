@@ -14,11 +14,11 @@ const InboxComponent = () => {
       <div className="p-[22px] flex flex-col mt-[33px]">
         <div className="flex flex-row items-center justify-between ">
           <div className=" flex flex-row justify-center gap-5">
-            <img src={previous} onClick={handleBack} />
+            <img src={previous} onClick={handleBack} alt="noImg" />
             <div className=" text-[24px]  text-[#4A4B4D]">Inbox</div>
           </div>
           <div className="justify-end items-center">
-            <img src={bucket} />
+            <img src={bucket} alt="noImg" />
           </div>
         </div>
       </div>
