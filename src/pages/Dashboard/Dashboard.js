@@ -5,7 +5,7 @@ import italian from "./images/Itanlian.png";
 import indian from "./images/indian.png";
 import tuktuk from "./images/tuktuk.png";
 import deNoir from "./images/deNoir.png";
-import tella from "./images/tella.png";
+import tella from "./images/Tella.png";
 import bambaa from "./images/bambaa.png";
 import josh from "./images/josh.png";
 import barita from "./images/barita.png";
